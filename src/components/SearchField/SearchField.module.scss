@@ -1,0 +1,74 @@
+@import '/src/mixins/colors.scss';
+@import '/src/mixins/fonts.scss';
+
+.SearchField{
+    background-color: $color-white;
+    @include Body2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex:1;  
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0 auto;
+    border: 0;
+    height: 44px;
+    margin: 0 auto;
+    border-radius: 22px;    
+    padding: 0 20px;
+    transition: 0.4s;
+    top: 0px;
+    left: 0px;
+}
+.img{
+    width: 20px;
+    height: 20px;
+    margin-left: auto;    
+    margin-top: 11px;
+}
+.ActiveSearch{
+    cursor: pointer;
+}
+input{
+    box-sizing: border-box; 
+    border:none;
+    width: 100%;
+    outline: none;
+    background-color: none;
+    
+    &::-moz-placeholder{
+         @include Body2;
+         line-height: 39px;
+        color:$color-gray700;
+        };
+   &::-webkit-input-placeholder{
+    @include Body2;
+        line-height: 39px;
+        color: $color-gray700;
+        
+    };
+    
+}
+
+.Active{
+    cursor: text;
+    border:1px solid $color-gray300;    
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    &:hover{
+        border-color: $color-cyan500
+    }
+    &:focus{
+        border-color: $color-cyan800;
+    }
+}
+
+.Blocked{
+    background-color: $color-gray300;
+}
+input:disabled{
+    background-color: $color-gray300;
+}
+

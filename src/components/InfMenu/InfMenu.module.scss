@@ -1,0 +1,67 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+
+.TextBox{
+    @include Headline6;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.short_menu{
+    display: none;
+    background-image: url(./question.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ButtonMenu{ 
+        cursor: pointer;
+        transition: 0.4s ease;
+        margin-right: 30px;
+        text-decoration: none;
+        color: $color-cyan900;
+        &:hover{
+            color: $color-cyan700;
+        }
+    }
+
+@media screen and (max-width: 1200px){
+    .TextBox {
+        padding: 35px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1010px){
+    .ButtonMenu{
+        margin-right: 10px;
+        font-size: 15px;
+    }
+    .ButtonMenu:last-child{
+        margin-right: 0;
+    }
+    .TextBox{
+        padding: 20px;
+    }
+}   
+
+@media screen and (max-width: 850px){
+    .short_menu{
+        display: block;
+    }
+    .TextBox{
+        display: none;
+    }
+}
+@media screen and (min-width: 850px){
+    .TextBox{
+        display: flex;
+    }
+}

@@ -1,0 +1,93 @@
+.ImgBlock{
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+}
+.DrugPage{
+    display: flex;
+    justify-content: center; 
+    margin: 0; 
+    width: 100%;
+    margin-bottom: 50px;
+}
+.Content{
+    word-wrap: break-word;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 2;
+    
+}
+.InformationBlock{   
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+.ButtonBlock{
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1210px){
+    .ImgBlock{
+        height: 390px;
+        width: 390px;
+    }
+
+}
+
+@media screen and (max-width: 1020px){
+    .ImgBlock{
+        height: 350px;
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 950px){
+    .ImgBlock{
+        height: 300px;
+        width: 300px;
+    }
+    .Content{
+        flex-wrap: wrap;
+    }
+    .InformationBlock{
+        width: 90%;
+        margin-top: 30px;
+    }
+} 
+
+@media screen and (max-width: 710px){
+    .ImgBlock{
+        height: 300px;
+        width: 300px;
+    }
+
+} 
+
+@media screen and (max-width: 670px){
+    .ImgBlock{
+        margin-bottom: 50px;
+    }
+    .Content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .InformationBlock{   
+        width: 80%;
+        margin-left: 0px;
+        margin-top: 0;
+    }
+} 
+
+@media screen and (max-width: 380px){
+    .ImgBlock{
+        height: 250px;
+        width: 250px;
+    }
+    .InformationBlock{   
+        width: 85%;
+    }
+} 

@@ -1,0 +1,97 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+.header{
+    @include Caption2;
+    font-size: 20px;
+    width: 100%;
+    height: 65px;
+    background-color: $color-gray100;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.TextBox{
+    @include Headline6;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo{
+    margin: 0 30px;
+    cursor: pointer;
+    width: 180px;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.burger_menu {
+	background: none;
+	display: flex;
+	width: 35px;
+	height: 35px;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 10px 0;
+	cursor: pointer;
+	overflow: hidden;
+    display: none;
+}
+
+.burger_menu span {
+	height: 4px;
+	background: $color-cyan800;
+	transition: transform 0.5s;
+	border-radius: 40px;
+}
+
+.burger_menu:focus{
+    outline: none;
+}
+
+.burger_menu>span {
+	background: $color-cyan800;
+}
+.activeBigMenu>span:nth-child(1) {
+	transform: translateY(10px) rotate(-45deg);
+}
+.activeBigMenu>span:nth-child(3) {
+	transform: translateY(-14px) rotate(45deg);
+}
+.activeBigMenu>span:nth-child(2) {
+	opacity: 0;
+}
+.activeBigMenu:not(:active)>span:nth-child(2) {
+	transition: opacity 0.2s 0.10s;
+}
+
+
+@media screen and (max-width: 1200px){
+}
+
+@media screen and (max-width: 850px){
+
+    .short_menu{
+        display: block;
+    }
+}   
+
+@media screen and (max-width: 768px){
+    .burger_menu{
+        display: flex;
+    }
+    .logo{
+        width: 140px;
+    }
+}

@@ -1,0 +1,82 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+.checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+label{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    @include Headline1;
+}
+
+.fake_checkbox{ 
+    cursor: pointer;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border: 3px solid $color-gray800;
+    border-radius: 3px;
+}
+
+.fake_checkbox::before{
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(Vector.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0);
+}
+
+.checkbox:checked + .fake_checkbox::before{
+    transform: scale(1);
+}
+
+.checkbox:checked + .fake_checkbox{
+    border: 0px solid;
+}
+
+.checkbox + .fake_checkbox{
+    border: 3px solid $color-gray800;
+}
+
+.checkbox:disabled + .fake_checkbox{
+    border: 3px solid $color-gray500;
+}
+
+.checkbox:disabled + .fake_checkbox + .text{
+    color: $color-gray600;
+}
+
+.checkbox:checked:disabled + .fake_checkbox{
+    border: none;
+}
+
+.checkbox:checked:disabled + .fake_checkbox::before{
+    display: inline-block;
+    border: 0px;
+    width: 18px;
+    height: 18px;
+    background-image: url(Vector1.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.text{
+    cursor: pointer;
+    @include Body2;
+    color: $color-gray900;
+    margin-left: 11px;
+}

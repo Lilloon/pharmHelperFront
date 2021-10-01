@@ -1,0 +1,159 @@
+@font-face{
+    font-family: Inter;
+    src: url(../fonts/Inter/static/Inter-Regular.ttf);
+}
+@font-face{
+    font-family: Inter-Bold;
+    src: url(../fonts/Inter/static/Inter-Bold.ttf);
+}
+@font-face {
+    font-family: Inter-ExtraBold;
+    src: url(../fonts/Inter/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Inter-ExtraLight;
+    src: url(../fonts/Inter/static/Inter-ExtraLight.ttf);
+}
+@font-face {
+    font-family: Inter-Light;
+    src: url(../fonts/Inter/static/Inter-Light.ttf);
+}
+@font-face {
+    font-family: Inter-Medium;
+    src: url(../fonts/Inter/static/Inter-Medium.ttf);
+}
+@font-face {
+    font-family: Inter-Semibold;
+    src: url(../fonts/Inter/static/Inter-SemiBold.ttf);
+}
+@font-face {
+    font-family: Inter-Thin;
+    src: url(../fonts/Inter/static/Inter-Thin.ttf);
+}
+
+@mixin Headline1 {
+font-family:Inter-Medium;
+font-style: normal;
+font-weight: 800;
+font-size: 96px;
+line-height: 112px;
+letter-spacing: -1.5px;
+font-feature-settings: 'cv01' on;
+}
+
+@mixin Headline2 {
+font-family:Inter-Medium;
+font-style: normal;
+font-weight: 800;
+font-size: 60px;
+line-height: 72px;
+letter-spacing: -0.5px;
+}
+
+@mixin Headline3 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 48px;
+line-height: 56px;
+}
+
+@mixin Headline4 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 34px;
+line-height: 40px;
+}
+
+@mixin Headline5 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 24px;
+letter-spacing: 0.18px;
+}
+
+@mixin Headline6 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.15px;
+}
+
+@mixin Subtitle1 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.15px;
+}
+
+@mixin Subtitle2{
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.1px;
+}
+
+@mixin Body1{
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.5px;
+}
+
+@mixin Body2{ 
+font-family: Inter;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: 0.25px;
+}
+
+@mixin Caption1{
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.4px;
+}
+
+@mixin Caption2 {
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: 0.4px;
+}
+
+@mixin Overlane1{
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 16px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+@mixin Overlane2{
+font-family: Inter-Medium;
+font-style: normal;
+font-weight: bold;
+font-size: 10px;
+line-height: 16px;
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}

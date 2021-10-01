@@ -1,0 +1,19 @@
+@import '/src/mixins/colors.scss';
+@import '/src/mixins/fonts.scss';
+
+.Name{
+    margin: 0;
+    @include Headline4;
+    color:$color-cyan800;
+}
+.Caption{
+    @include Body2;
+    color:$color-gray600;
+    margin: 0;
+}
+
+.form{
+    @include Body2;
+    color: $color-gray700;
+    text-transform: uppercase;
+}

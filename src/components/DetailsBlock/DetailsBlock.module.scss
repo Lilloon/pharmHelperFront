@@ -1,0 +1,20 @@
+@import '/src/mixins/fonts.scss';
+@import '/src/mixins/colors.scss';
+
+.DetailsBlock{
+    margin-top: 48px;
+    width: 100%;
+}
+
+.Details{
+    margin-top: 0;
+    @include Headline6;
+    color:$color-gray900;
+    width: 100%;
+}
+.DetailsText{
+    width: 100%;
+    margin-top: 16px;
+    @include Body2;
+    color: $color-gray900;
+}

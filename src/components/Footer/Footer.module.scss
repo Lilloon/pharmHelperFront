@@ -1,0 +1,26 @@
+@import '/src/mixins/colors.scss';
+@import '/src/mixins/fonts.scss';
+.Footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include Caption1;
+    font-size: 8px;
+    width: 100%;
+    height: 70px;
+    background-color: $color-cyan900;
+    flex-shrink: 0;
+    color: $color-white;
+    text-align: center;
+    line-height: 10px;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+@media screen and (max-width: 720px){
+    .Footer h2{
+        font-size: 9px;
+        margin: 0;
+    }
+}

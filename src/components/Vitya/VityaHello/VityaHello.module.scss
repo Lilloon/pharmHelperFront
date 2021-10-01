@@ -1,0 +1,16 @@
+@import '../../../mixins/fonts.scss';
+.textCloud{
+  @include Body2;
+  display: block;
+  justify-content: center;
+background-color: white;
+border: 1px solid gray;
+border-radius: 30px;
+font-size: 7px;
+position: absolute;
+margin-left: 70px;
+padding-left: 10px;
+padding-right: 10px;
+line-height: 18px;
+width: 70%;
+}

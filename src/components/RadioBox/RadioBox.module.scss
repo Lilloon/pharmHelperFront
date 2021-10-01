@@ -1,0 +1,19 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+.box{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    min-width: 160px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .box{
+        margin-top: 32px;
+        margin-left: 20px;
+    }
+}

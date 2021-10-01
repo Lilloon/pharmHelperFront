@@ -1,0 +1,28 @@
+@import '../../mixins/fonts.scss';
+@import '../../mixins/colors.scss';
+
+.pagination{
+  user-select: none;
+  transition: 0.5s ease;
+  @include Body1;
+  display: flex;
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  li{
+    margin: 10px;
+  }
+}
+.active{
+  display: flex;
+  transform: scale(1.25);
+  justify-content: center;
+  background-color: $color-gray200;
+  @include Body1;
+ font-size: 20px; 
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+
+
+}

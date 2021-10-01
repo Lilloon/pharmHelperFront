@@ -1,0 +1,69 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+.label{
+    display: flex;
+    align-items: center;
+    height: 24px;
+    flex-wrap: wrap;
+}
+
+.radio{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.fake_radio{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border: 3px solid $color-gray800;
+    border-radius: 60%;
+}
+
+.fake_radio::before{
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: $color-cyan800;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+.radio:checked + .fake_radio::before{
+    transform: scale(1);
+}
+
+.radio:checked + .fake_radio{
+    border: 3px solid $color-cyan800;
+}
+
+.radio:disabled + .fake_radio{
+    border: 3px solid $color-gray500;
+}
+
+.radio:disabled + .fake_radio + .text{
+    color: $color-gray600;
+} 
+
+.radio:disabled:checked + .fake_radio::before {
+    background-color: $color-gray500;
+}
+
+.text{
+    cursor: pointer;
+    @include Body2;
+    color: $color-gray700;
+    margin-left: 10px;
+}

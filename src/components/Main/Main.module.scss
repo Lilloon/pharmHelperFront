@@ -1,0 +1,122 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+.Main_box{
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    background-color: $color-gray50;
+    @media (min-width:320px){
+        width: 0%;
+        display: none;    
+        overflow-y: scroll;
+    }
+    @media (min-width:770px){
+        width: 30%;
+        display: block;
+        overflow-y: unset;
+    }
+    @media (min-width:1200px){
+        width: 30%;
+    }
+}
+
+.box_show{
+    left: 0;
+    width: 99%;
+    z-index: 3;
+    position: fixed;
+    bottom: 70px;
+    top: 65px;
+    display: block;
+    @media (min-width:768px){
+        position: relative;
+        top: 0;
+        width: 35%;
+    }
+}
+
+.box_cards{
+    margin: 0 30px;
+}
+
+.box_chips{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blur{
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(2px);
+    position: fixed;
+}
+
+
+.block{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+.box_search{
+    margin-left: 30px;
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.box_search__title{
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-top: 20px;
+    @include Body2;
+    font-size: 16px;
+    color: $color-gray700;
+}
+
+.box_search__searchfield{
+    width: 100%;
+}
+
+.button_find{
+    margin: 34px 0 30px 30px;
+}
+
+.box_title{
+    @include Headline3;
+    color: $color-cyan800;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+.title_select{
+    @include Headline5;
+    display: block;
+    margin-top: 55px;
+    color: $color-cyan800;
+}
+
+.chip_box{
+    display: flex;
+}
+
+@media screen and (max-width: 640px) {
+    .block{
+        flex-wrap: wrap;
+    }
+
+    .box_search__searchfield{
+        width: 100%;
+    }
+
+    .box_search__title{
+        margin-right: 20px;
+    }
+
+    .box_title{
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+}

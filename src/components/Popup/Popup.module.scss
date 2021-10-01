@@ -1,0 +1,62 @@
+@import './../../mixins/colors.scss';
+@import './../../mixins/fonts.scss';
+
+.background{
+  background-color: rgb(21, 18, 26);
+  opacity: 0.6;
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  cursor: pointer;
+  height: 200%;
+  
+}
+.card{
+  height: 70%;
+  overflow-y: auto;
+  background-color: white;
+  width: 60%;
+  opacity: 1;
+  position:fixed;
+  border:1px solid $color-cyan500;
+  border-radius: 25px;
+  padding: 20px;
+  
+}
+.popup{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  z-index: 10000000000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow-y: hidden;
+}
+.iconClose{
+  position: relative;
+  right: 0;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  transition: 0.4s ease;
+  &:hover{
+  background-color: $color-cyan800;
+
+  }
+}
+
+
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+color: $color-cyan800;
+@include Headline4;
+margin: 0;
+}

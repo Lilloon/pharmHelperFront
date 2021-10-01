@@ -1,0 +1,30 @@
+@import '/src/mixins/fonts.scss';
+@import '/src/mixins/colors.scss';
+
+.input{
+    display: none;
+    cursor: pointer;
+}
+
+.file{
+    opacity: 0;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    cursor: pointer; 
+}
+
+.block{
+    margin-top: 20px;
+    margin-left: calc(100% - 44px);
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-image: url(./plus.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}

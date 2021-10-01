@@ -1,0 +1,65 @@
+@import '/src/mixins/colors.scss';
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+}
+
+.body{
+    display: flex;
+    flex-grow: 1;
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+
+#root{
+    height: 100%;
+}
+.MainContent{
+    padding-left: 50px;
+    width: 70%;    
+    height: 100%;
+    margin-left: 30%;
+}
+
+.blur{
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    z-index: 1;
+}
+
+.click_outside{
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .MainContent{
+        padding-left: 0px;
+        margin-left: 0px;
+        width: 100%;    
+    }
+}
+
+@media screen and (min-width: 768px){
+    .blur{
+        backdrop-filter: blur(0px);
+    }
+    body{
+        overflow-y: scroll;
+    }
+}

@@ -1,0 +1,39 @@
+@import './../../mixins/colors.scss';
+@import './../../mixins/fonts.scss';
+.InputWindow{
+    @include Body2;
+    outline: none;
+    margin: 0 auto;
+    border: 0;
+    width: 150px;
+    height: 40px;
+    margin-top: 1px ;
+    margin: 0 auto;
+    display: flex;
+    border:1px solid $color-gray300;
+    height: 44px;
+    border-radius: 22px;
+    padding: 0 20px;
+    transition: 0.4s;
+}
+.Active::-moz-placeholder{
+    color:$color-gray500;
+    margin-left: 50px};
+.Active::-webkit-input-placeholder{
+    color: $color-gray500;
+    margin-left: 50px
+};
+.Active{
+    cursor: text;
+}
+.Active:hover{
+    border-color: $color-cyan500;
+}
+
+.Active:focus{
+    border-color: $color-cyan800;
+}
+.Blocked{
+    background: $color-gray300 ;
+}
+

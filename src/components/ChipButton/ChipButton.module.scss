@@ -1,0 +1,38 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+*{
+    box-sizing: border-box;
+}
+
+.button{
+    display: block;
+    @include Caption1;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background-color: $color-white;
+    color: $color-cyan800;
+    border: 1px solid $color-gray300;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: 8px;
+    margin-top: 26px;
+    &.Active {
+        background: $color-cyan800;
+        color: $color-white;
+        border: 1px solid #00838F;
+    }
+    &:hover{
+        border: 1px solid #00838F;
+    }
+}
+
+.button:first-child{
+    margin-left: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .button{
+    margin-top: 16px;
+}
+}

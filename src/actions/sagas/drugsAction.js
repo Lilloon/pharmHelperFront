@@ -1,0 +1,27 @@
+import { createAction } from '../actionCreator';
+import { SET_DRUGS_TYPES } from '../types'
+
+export const getPopularDrugs = createAction(SET_DRUGS_TYPES.USER_FETCH_REQUESTED);
+export const setPopularDrugs = createAction(SET_DRUGS_TYPES.SET_DRUGS)
+export const FetchPopularSucceeded = createAction(SET_DRUGS_TYPES.USER_FETCH_SUCCEEDED)
+export const FetchPopularFailed = createAction(SET_DRUGS_TYPES.USER_FETCH_FAILED)
+export const FetchSearchSucceeded = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_SUCCEEDED)
+export const GetSearchDrugs = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_REQUESTED)
+export const setSearchList = createAction(SET_DRUGS_TYPES.SET_SEARCH_LIST)
+export const getAllCountries = createAction(SET_DRUGS_TYPES.GET_ALL_COUNTRIES_REQUESTED)
+export const FetchAllCountriesSucceeded = createAction(SET_DRUGS_TYPES.GET_ALL_COUNTRIES_SUCCEEDED)
+export const FetchAllCountriesFailed = createAction(SET_DRUGS_TYPES.GET_ALL_COUNTRIES_FAILED)
+export const setAllCountriesList = createAction(SET_DRUGS_TYPES.SET_ALL_COUNTRIES_LIST)
+export const getFullSearch = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_FULL_REQUESTED)
+export const setFullSearch = createAction(SET_DRUGS_TYPES.SET_SEARCH_FULL_DRUG)
+export const FetchSearchFullSucceeded = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_FULL_SUCCEEDED)
+export const FetchSearchFullFailed = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_FULL_FAILED)
+export const clearSearchList = createAction(SET_DRUGS_TYPES.SEARCH_DRUGS_CLEAR)
+export const getAnalogs = createAction(SET_DRUGS_TYPES.GET_ANALOGS_REQUESTED)
+export const setAnalogs = createAction(SET_DRUGS_TYPES.SET_ANALOGS)
+export const FetchAnalogsSucceeded = createAction(SET_DRUGS_TYPES.GET_ANALOGS_SUCCEEDED)
+export const FetchAnalogsFailed = createAction(SET_DRUGS_TYPES.GET_ANALOGS_FAILED)
+export const putPictures = createAction(SET_DRUGS_TYPES.PUT_PICTURES_REQUESTED)
+export const setPictures = createAction(SET_DRUGS_TYPES.SET_PICTURES)
+export const FetchPicturesSucceeded = createAction(SET_DRUGS_TYPES.PUT_PICTURES_SUCCEEDED)
+export const FetchPicturesFailed = createAction(SET_DRUGS_TYPES.PUT_PICTURES_FAILED)

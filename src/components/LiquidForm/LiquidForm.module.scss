@@ -1,0 +1,26 @@
+@import "../../mixins/fonts.scss";
+@import "../../mixins/colors.scss";
+
+.box{
+    margin-left: 30px;
+    margin-top: 32px;
+}
+
+.box_title{
+    @include Headline6;
+    margin-bottom: 32px;
+    color: $color-cyan800;
+}
+
+.box_title__mini{
+    margin-left: 21px;
+    @include Body2;
+    display: block;
+    font-size: 16px;
+    color: $color-gray800;
+}
+
+.box_chips{
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,97 @@
+@import './../../mixins/colors.scss';
+@import "../../mixins/fonts.scss";
+
+.TextButton{
+    @include Body2;
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;    
+    height: 44px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    &.Default{
+        border: 1px solid $color-cyan800;
+        background: $color-cyan800;
+        border-radius: 22px;
+        color:$color-white  ;
+        &:hover{
+            border: 1px solid $color-cyan700;
+            background: $color-cyan700;   
+        }
+        &:active{
+            transition: 0.1s;
+            border: 1px solid $color-cyan900;
+            background: $color-cyan900; 
+        }
+        &.Blocked{
+            border: 1px solid $color-gray500;
+            color: $color-white;
+            background: $color-gray500;
+            cursor: default;
+            &:hover{
+                border: 1px solid $color-gray500;
+                background: $color-gray500;
+    
+            }
+            &:active{
+                border: 1px solid $color-gray500;
+                background: $color-gray500;
+            }
+        }      
+    }
+    &.OnlyBorders{
+        border: 1px solid $color-cyan800;
+        box-sizing: border-box;
+        border-radius: 22px;
+        background: $color-white;
+        color: $color-cyan800;
+        &:hover{
+            border: 1px solid $color-cyan700;
+            color: $color-cyan700;
+
+        }
+        &:active{
+            border: 1px solid $color-cyan900;
+            color: $color-cyan900;
+        }
+        &.Blocked{
+            border: 1px solid $color-gray500;
+            color: $color-gray500;
+            cursor: default;
+            &:hover{
+                border: 1px solid $color-gray500;
+                color: $color-gray500;
+    
+            }
+            &:active{
+                border: 1px solid $color-gray500;
+                color: $color-gray500;
+            }
+        }
+    }
+    &.OnlyText{
+        background: none;
+        border:none;
+        color:$color-cyan800;
+        &:hover{
+            color:$color-cyan700;
+        }
+        &:active{
+            color: $color-cyan900;
+        }
+        &.Blocked{
+            cursor: default;
+            color: $color-gray500;
+            &:hover{
+                color: $color-gray500;
+    
+            }
+            &:active{
+                color: $color-gray500;
+            }
+        }
+    }
+}

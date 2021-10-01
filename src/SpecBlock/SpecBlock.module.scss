@@ -1,0 +1,57 @@
+@import '/src/mixins/fonts.scss';
+@import '/src/mixins/colors.scss';
+
+.SpecBlock{    
+    margin-top: 20px;
+}
+.Name{
+    @include Headline6;
+}
+.Spec{
+    @include Subtitle2;
+    min-width: 165px;
+    width: 100%;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+.Value{
+    @include Body2;
+    width: 100%;
+    text-transform: uppercase;
+    overflow: overlay;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00000024;
+    width: 100%;
+}
+
+@media screen and (max-width: 1260px) {
+    .Spec{
+        min-width: 122px;
+        white-space: pre-wrap;
+        width: 0%;
+        padding: 10px 10px 10px 0;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .Spec{
+        min-width: 165px;
+        white-space: pre-wrap;
+        width: 0%;
+        padding: 10px 10px 10px 0;
+    }
+
+} 
+@media screen and (max-width: 510px){
+    .Spec{
+        min-width: 122px;
+    }
+    .Value{
+        font-size: 12px;
+    }
+
+} 
