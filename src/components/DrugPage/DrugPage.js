@@ -16,6 +16,8 @@ const DrugPage = ({ d = 'Найти аналоги' }) => {
   let id = match.params;
   let history = useHistory()
   const dispatch = useDispatch();
+  console.log(id)
+
   const findAnalog = () => {
     history.push(`/analogs/${id.id}?pageNumber=0`)
   }
@@ -24,6 +26,7 @@ const DrugPage = ({ d = 'Найти аналоги' }) => {
     dispatch(getFullSearch(id.id));
   }, [id, dispatch]);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => (() => dispatch(clear())), [])
   const drugPage = useSelector((state) => state.SearchDrugFull.SearchDrugFull);
 

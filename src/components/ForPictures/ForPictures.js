@@ -8,6 +8,7 @@ const ForPictures = () => {
   const [value, setValue] = useState('');
   const [imageNew, setImage] = useState({});
   const dispatch = useDispatch();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => {
     setValue(window.location.href.split('/')[window.location.href.split('/').length - 1])
   })
@@ -29,7 +30,6 @@ const ForPictures = () => {
       convertPictures(value, imageNew);
     } else {
       setImage(e.target.files[0]);
-      console.log(imageNew);
     }
   }
 

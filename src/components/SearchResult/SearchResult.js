@@ -18,7 +18,9 @@ const SearchResult = () => {
   const dispatch = useDispatch()
   const [searchResults, setResults] = useState([])
   const searchParams = useSelector((state) => state.SearchParamsReducer.searchParams)
-  const checkResults = useSelector((state) => state.SearchList.SearchDrugs)
+  const checkResults = useSelector((state) => state.SearchList.SearchDrugs.drugs)
+  const totalPages = useSelector((state) => state.SearchList.SearchDrugs.totalPages);
+  const isLoading = useSelector((state) => state.loadingScreenState.loadScreenState);
   useEffect(() => {
     dispatch(setPageNumber(Number(queryString.parse(location.search).pageNumber)))
 
@@ -77,21 +79,26 @@ const SearchResult = () => {
   }, [checkResults])
   return (
     <div>
-      <DrugCardList drugObj={searchResults} />
-      <ReactPaginate
-        forcePage={Number(queryString.parse(location.search).pageNumber)}
-        disableInitialCallback
-        previousLabel="<"
-        nextLabel=">"
-        breakLabel="..."
-        breakClassName="break-me"
-        pageCount={checkResults.totalPages}
-        marginPagesDisplayed={2}
-        pageRangeDisplayed={window.screen.width < 400 ? 2 : 4}
-        onPageChange={handleClick}
-        containerClassName={styles.pagination}
-        activeClassName={styles.active}
-      />
+      {searchResults.length && !isLoading ? (
+        <>
+          <DrugCardList drugObj={searchResults} />
+          <ReactPaginate
+            forcePage={Number(queryString.parse(location.search).pageNumber)}
+            disableInitialCallback
+            previousLabel="<"
+            nextLabel=">"
+            breakLabel="..."
+            breakClassName="break-me"
+            pageCount={totalPages}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={window.screen.width < 400 ? 2 : 4}
+            onPageChange={handleClick}
+            containerClassName={styles.pagination}
+            activeClassName={styles.active}
+          />
+        </>
+      ) : <div className={styles.nothing}>По данному запросу ничего не было найдено.</div>}
+
     </div>
   )
 }

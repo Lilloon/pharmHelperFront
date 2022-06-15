@@ -49,6 +49,7 @@ const Content = () => {
     setButtonActive([false, false, false, true]);
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => (() => dispatch(clearPopularCheck())), [])
 
   return (

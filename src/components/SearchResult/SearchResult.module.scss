@@ -1,6 +1,12 @@
 @import '../../mixins/fonts.scss';
 @import '../../mixins/colors.scss';
 
+
+.nothing {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 25px
+}
 .pagination{
   user-select: none;
   transition: 0.5s ease;

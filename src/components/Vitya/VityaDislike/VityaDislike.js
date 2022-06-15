@@ -29,7 +29,7 @@ const VityaDislike = () => {
         <animated.div style={{
           ...props,
           position: 'fixed',
-          zIndex: 0,
+          zIndex: 2,
           width: '100px',
           top: '150px',
           left: '26%',

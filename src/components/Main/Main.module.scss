@@ -4,7 +4,7 @@
 .Main_box{
     position: fixed;
     height: 100%;
-    z-index: 1;
+    z-index: 5;
     display: block;
     background-color: $color-gray50;
     @media (min-width:320px){
